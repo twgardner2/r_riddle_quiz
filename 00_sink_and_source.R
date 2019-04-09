@@ -14,4 +14,5 @@ pkgs <- c('beepr',
 safeLibrary(pkgs)
 remove(safeLibrary, pkgs)
 
-source('quiz.R')
+source('01_quiz.R')
+source('02_you_win.R')

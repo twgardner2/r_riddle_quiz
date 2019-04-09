@@ -103,8 +103,6 @@ askQuestion <- function(question, answer, menu_choices, menu_answer = '') {
 
 }
 
-# askQuestion(questions[1], answers[1], menu_choices[[1]])
-
 # Map askQuestion over the vectors
 pmap(
   .l = list(
@@ -113,7 +111,7 @@ pmap(
   .f = askQuestion
 )
 
-beep(8)
+
 
 
 
