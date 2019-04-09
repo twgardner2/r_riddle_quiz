@@ -5,12 +5,13 @@ safeLibrary <- function(pkg){
   sapply(pkg, library, character.only = T)
 }
 
-pkgs <- c('beepr',
+pkgs <- c('utf8',
+          'beepr',
           'tuneR',
           'seewave',
           'varhandle',
-          'tidyverse'
-)
+          'tidyverse')
+
 safeLibrary(pkgs)
 remove(safeLibrary, pkgs)
 

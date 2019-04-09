@@ -67,7 +67,7 @@ askQuestion <- function(question, answer, menu_choices, menu_answer = '') {
   # Accept free-text input for first two attempts.
   while(attempt_num < 3) {
     input <- readline(prompt = paste0('Attempt #', attempt_num, ' - ', question))
-    # if(input == answer | grepl(tolower(as.character(input)), tolower(as.character(answer)))) {break}
+    boop_boop_beep_boop()
     if(check_answer(input, answer)) { break }
     attempt_num <- wrong_answer(attempt_num)
     }
@@ -83,7 +83,7 @@ askQuestion <- function(question, answer, menu_choices, menu_answer = '') {
       choices = menu_choices,
       title = paste0('Attempt #', attempt_num, ' - ', question)
     )
-    # attempt_num <- attempt_num + 1
+    boop_boop_beep_boop()
     
     if ( check_answer(menu_choices[menu_answer], answer) ) {
       right_answer()
@@ -92,6 +92,8 @@ askQuestion <- function(question, answer, menu_choices, menu_answer = '') {
         attempt_num <- wrong_answer(attempt_num)
         menu_answer <- menu(choices = menu_choices,
                             title = paste0('Attempt #', attempt_num, ' - ', question))
+        boop_boop_beep_boop()
+        
       }
     }
     
@@ -102,6 +104,20 @@ askQuestion <- function(question, answer, menu_choices, menu_answer = '') {
   
 
 }
+
+# Function for jibberish output
+boop_boop_beep_boop <- function() {
+  for (i in 1:20) {
+    x <- 1:50
+    vector <- sample(x, 30, replace = TRUE)
+    print(paste0('Calculating...: ', intToUtf8(vector)))
+    Sys.sleep(0.1)
+    
+    
+  }
+}
+
+
 
 # Map askQuestion over the vectors
 pmap(
