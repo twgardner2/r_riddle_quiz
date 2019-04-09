@@ -13,13 +13,13 @@ questions <- c(
 )
 
 # Vector of the answers.
-answers <- c('12', '2', 'A clock')
+answers <- c('12', '2', 'clock')
 
 # Vector of the menu choices.
 menu_choices <- list(
   c(1, 2, 12),
   c(1, 3, 2),
-  c('A computer mouse', 'A barstool', 'A clock')
+  c('computer mouse', 'barstool', 'clock')
 )
 
 # Function to check answer
@@ -32,7 +32,7 @@ check_answer <- function(input, answer) {
     }
     
   } else {
-    if (grepl(tolower(as.character(input)), tolower(as.character(answer)))) {
+    if (grepl(tolower(as.character(answer)), tolower(as.character(input)))) {
       return(TRUE)
     } else {
       return(FALSE)
@@ -111,7 +111,7 @@ boop_boop_beep_boop <- function() {
     x <- 1:50
     vector <- sample(x, 30, replace = TRUE)
     print(paste0('Calculating...: ', intToUtf8(vector)))
-    Sys.sleep(0.1)
+    Sys.sleep(0.08)
     
     
   }
